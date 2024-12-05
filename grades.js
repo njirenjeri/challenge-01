@@ -1,8 +1,8 @@
 // this function assigns students grades depending on  their score
-
-function assignGrade(){
+const exam = require('readline-sync');
+function assignGrade(score){
     // promp user to input the score
-    let score = prompt("Enter student score: ");
+    // let score = prompt("Enter student score: ");
     score = Number(score); //converts input to a number
     // check if score is valid should be between 0 - 100
     if(score < 0 || score > 100){
@@ -24,5 +24,7 @@ function assignGrade(){
     console.log(`student score: ${score} and Grade: ${grade}`);
 }
 
-assignGrade();
+const score = parseFloat(exam.question('Enter Student Score: '));
+
+const grade = assignGrade(score);
 
