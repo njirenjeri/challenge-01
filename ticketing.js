@@ -10,8 +10,8 @@ function speedChecker(speed){
         // return "OK";
     }else{
         // calculates speed above the speed limit
-        const difference = speedLimit - speed;
-        const demeritPoints = Math.abs(difference/5);
+        const difference = speed - speedLimit;
+        const demeritPoints = Math.floor(difference/5);
         totalPoints += demeritPoints; //keeps track of the points such that if they get to 12, they are suspended
         // console.log(`Points: ${demeritPoints}`);
         if(totalPoints >= 12){
